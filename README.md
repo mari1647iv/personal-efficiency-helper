@@ -1,39 +1,93 @@
-# personal-efficiency-helper
+[![CI][workflow-shield]][workflow-url]
+[![Tag][tag-shield]][tag-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+<!-- [![Contributors][contributors-shield]][contributors-url] -->
+
+# Personal Efficiency Helper
+
+[![Powered][powered-shield]][forthebadge-url] 
+[![Build][build-shield]][forthebadge-url] 
+[![Made][made-shield]][forthebadge-url]
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#design">Design Mockups</a></li>
+    <li><a href="#getting_started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#scripts">Available Scripts</a></li>
+      </ul>
+    </li>
+    <li><a href="#author">Author</a></li>
+    <li><a href="#license">License</a></li>
+  </ul>
+</details>
+
+## About <a name = "about"></a>
 
 The assistant to improve your personal efficiency on the daily basis. The application contains ToDo planner, habits tracker, concentration keeper, as well as statistics, personal efficiency hacks and recommendations. 
 
-## Design Mockups
+## Design Mockups <a name = "design"></a>
 
 Current design mockups and UI palette is available in [Figma](https://www.figma.com/file/0D6TspleL2f30VaCTQGKsS/Personal-Efficiency-Helper?node-id=0%3A1).
 
-## Available Scripts
+## Getting Started <a name = "getting_started"></a>
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. <!--See [deployment](#deployment) for notes on how to deploy the project on a live system.-->
+
+### Prerequisites <a name = "prerequisites"></a>
+
+Download the project from GitHub
+
+```bash
+git clone https://github.com/mari1647iv/personal-efficiency-helper.git
+```
+
+Install the necessary dependecies using `npm`
+
+```npm
+npm i
+```
+
+### Installation <a name = "installation"></a>
+
+Start the application
+
+```npm
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+### Available Scripts <a name = "scripts"></a>
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in the development mode on port 3000.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page will reload when you make changes. You may also see any lint errors in the console.
 
-### `npm test`
+#### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
-### `npm run build`
+#### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<!-- ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
@@ -43,6 +97,41 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+
 ### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app) -->
+
+## Author <a name = "author"></a>
+
+**Marina Ivanova. Frontend developer from Kazan, Russia**
+
+- Github: [@mari1647iv](https://github.com/mari1647iv)
+- Email: ima1647@outlook.com
+- Telegram: [@mari1647iv](https://t.me/mari1647iv)
+- CV: https://career.habr.com/mari1647iv/print.pdf
+
+Project Link: https://github.com/mari1647iv/personal-efficiency-helper
+
+## License <a name = "license"></a>
+
+Distributed under the MIT License. See `LICENSE.md` for more information.
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[workflow-shield]: https://img.shields.io/github/workflow/status/mari1647iv/personal-efficiency-helper/Node.js%20CI?style=for-the-badge
+[workflow-url]: https://github.com/mari1647iv/personal-efficiency-helper/actions/workflows/node.js.yml
+<!-- [contributors-shield]: https://img.shields.io/github/contributors/mari1647iv/personal-efficiency-helper.svg?style=for-the-badge
+[contributors-url]: https://github.com/mari1647iv/personal-efficiency-helper/graphs/contributors -->
+[issues-shield]: https://img.shields.io/github/issues/mari1647iv/personal-efficiency-helper.svg?style=for-the-badge
+[issues-url]: https://github.com/mari1647iv/personal-efficiency-helper/issues
+[license-shield]: https://img.shields.io/github/license/mari1647iv/personal-efficiency-helper.svg?color=orange&style=for-the-badge
+[license-url]: https://github.com/mari1647iv/personal-efficiency-helper/blob/main/LICENSE
+[tag-shield]: https://img.shields.io/github/v/tag/mari1647iv/personal-efficiency-helper?style=for-the-badge
+[tag-url]: https://github.com/mari1647iv/personal-efficiency-helper/tags
+[powered-shield]: https://forthebadge.com/images/badges/powered-by-coffee.svg
+[build-shield]: https://forthebadge.com/images/badges/built-with-love.svg
+[made-shield]: https://forthebadge.com/images/badges/made-with-javascript.svg?style=for-the-badge
+[forthebadge-url]: https://forthebadge.com
