@@ -1,10 +1,17 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-style: normal;
+  text-transform: uppercase;
+  color: #000000;
+  background: #F9F9F9;
 }
 
 code {
@@ -16,17 +23,40 @@ code {
   text-align: center;
 }
 
-.repo-link {
-  color: #61dafb;
-}
-
 .App-body {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+/*  fonts  */
+
+h1 {
+  font-weight: 100;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.045em;
+}
+
+h3 {
+  font-weight: 200;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.045em;
+}
+
+p {
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.045em;
 }

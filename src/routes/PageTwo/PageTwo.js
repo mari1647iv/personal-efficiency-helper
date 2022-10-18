@@ -1,10 +1,12 @@
 import './PageTwo.css';
 import React from 'react';
+import Header from '../../components/Header/Header';
 
 function PageTwo() {
   return (
     <div className="App">
-      <body className="App-body">
+      <Header />
+      <main className="App-body">
         <a
           className="repo-link"
           href="https://github.com/mari1647iv/personal-efficiency-helper"
@@ -13,7 +15,7 @@ function PageTwo() {
         >
           GitHub Repository
         </a>
-      </body>
+      </main>
     </div>
   );
 }

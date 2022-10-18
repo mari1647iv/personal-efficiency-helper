@@ -1,0 +1,40 @@
+header {
+  height: 100px;
+  width: 80%;
+  display: flex;
+  padding: 0 10%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 34px;
+}
+
+.logo {
+  position: absolute;
+  left: max( calc(5% - 20px) , 15px );
+}
+
+.shortcuts {
+  display: flex;
+  width: 50%;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shortcuts .disabled {
+  color: #929292;
+}
+
+.shortcuts .link {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.shortcuts h2:not(.disabled):hover,.current {
+  border-bottom: 1px solid black;
+}
+
+.shortcuts h2:not(.disabled):active,.current {
+  font-weight: 300;
+}
