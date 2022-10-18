@@ -1,5 +1,5 @@
-[![CI][workflow-shield]][workflow-url]
 [![Tag][tag-shield]][tag-url]
+[![CI][workflow-shield]][workflow-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 <!-- [![Contributors][contributors-shield]][contributors-url] -->
