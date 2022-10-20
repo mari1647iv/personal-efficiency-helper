@@ -19,16 +19,41 @@ code {
     monospace;
 }
 
+button {
+  font-family: 'Roboto', 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .App {
   text-align: center;
 }
 
-.App-body {
-  min-height: calc(100vh - 100px);
+.content-box {
+  width: 80%;
+  padding: 25px 10%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+main {
+  width: 50%;
+  min-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 64px;
+}
+
+aside {
+  width: 45%;
+  min-width: 450px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 /*  fonts  */

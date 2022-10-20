@@ -1,0 +1,142 @@
+.timer-box {
+  width: 85%;
+  padding-top: 85%; 
+  border-radius: 50%;
+  background: conic-gradient(from 0deg at 50% 50%, #F9F9F9 0deg, #B4B4B4 3.75deg, #B4B4B4 221.25deg, #F9F9F9 243.75deg, #F9F9F9 360deg);
+  box-shadow: inset 0px 0px 15px 7px #F9F9F9;
+  position: relative;
+}
+
+.timer-inner-box {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin: 30px;
+  width: calc(100% - 60px);
+  padding-top: calc(100% - 60px); 
+  border-radius: 50%;
+  
+  background: #F9F9F9;
+  box-shadow: 0px 0px 26px 10px #F9F9F9;
+}
+
+.timer-textbox {
+  position: absolute;
+  left: calc(50% - 175px);
+  top: calc(30% - 50px);
+  width: 350px; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.timer-textbox h1{
+  text-align: left; 
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 85.19%;
+}
+
+.timer-textbox hr {
+  border: 1px solid #000000;
+  margin: 10px 0 36px;
+  width: 100%;
+}
+
+.timer-textbox h2 {
+  width: 100%;
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 3rem;
+
+  text-align: center;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.controllers {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.controllers button {
+  min-width: 200px;
+  padding: 13px 48px;
+
+  font-weight: 200;
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  background: #ECECEC;
+  border: 1px solid #929292;
+  outline: 5px solid #ECECEC;
+}
+
+.controllers button:disabled {
+  border:none;
+  outline: none;
+}
+
+aside h2 {
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+
+.technique-box {
+  width: calc(100% - 40px);
+  padding: 20px;
+  text-align: right;
+  background: #ECECEC;
+}
+
+.playlists-box {
+  width: calc(100% - 43px);
+  padding: 20px 20px 50px;
+  border: 1.5px solid #ADADAD;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.playlists {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.playlist {
+  width: calc(100% - 50px);
+  padding: 16px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ECECEC;
+  gap: 25px;
+}
+
+.playlist>div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.playlist-info {
+  display: flex;
+  gap: 50px;
+  text-transform: lowercase;
+}
+
+.show-more {
+  position: relative;
+  padding: 9px 0;
+}
+
+.show-more p {
+  width: 82px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 41px);
+  background-color: #F9F9F9;
+  text-align: center;
+}

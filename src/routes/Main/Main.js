@@ -6,7 +6,7 @@ function Main() {
   return (
     <div className="App">
       <Header />
-      <main className="App-body">
+      <main>
         <a
           className="repo-link"
           href="https://github.com/mari1647iv/personal-efficiency-helper"
