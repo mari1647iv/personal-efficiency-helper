@@ -1,0 +1,54 @@
+.timer-box {
+  width: 85%;
+  padding-top: 85%; 
+  border-radius: 50%;
+  background: conic-gradient(from 0deg at 50% 50%, #F9F9F9 0deg, #B4B4B4 3.75deg, #B4B4B4 221.25deg, #F9F9F9 243.75deg, #F9F9F9 360deg);
+  box-shadow: inset 0px 0px 15px 7px #F9F9F9;
+  position: relative;
+}
+
+.timer-inner-box {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin: 30px;
+  width: calc(100% - 60px);
+  padding-top: calc(100% - 60px); 
+  border-radius: 50%;
+  
+  background: #F9F9F9;
+  box-shadow: 0px 0px 26px 10px #F9F9F9;
+}
+
+.timer-textbox {
+  position: absolute;
+  left: calc(50% - 175px);
+  top: calc(30% - 50px);
+  width: 350px; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.timer-textbox h1{
+  text-align: left; 
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 85.19%;
+}
+
+.timer-textbox hr {
+  border: 1px solid #000000;
+  margin: 10px 0 36px;
+  width: 100%;
+}
+
+.timer-textbox h2 {
+  width: 100%;
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 3rem;
+
+  text-align: center;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}

@@ -1,40 +1,61 @@
 import './Focus.css';
-import React from 'react';
+import React, {useEffect} from 'react';
 import Header from '../../components/Header/Header';
 import { Music, Play } from 'react-feather';
+import Timer from '../../components/Timer/Timer';
+import { useSelector, useDispatch } from 'react-redux'
+import { play, pause, setTime, tick } from '../../store/features/timer/timerSlice'
+import { POMODORO_TECHNIQUE } from '../../assets/constants';
 
 function Focus() {
+  let isPlaying = useSelector((state) => state.timer.isPlaying)
+  let timeLeft = useSelector((state) => state.timer.time)
+  const dispatch = useDispatch()
+  let timerId
+
+  useEffect(() => {
+    if (timeLeft<1000) {
+      timerPause()
+    }
+  }, [timeLeft])
+
+  function timerPlay() {
+      dispatch(play())
+      timerId = setInterval(() => {
+        dispatch(tick())
+      }, 1000)
+  }
+
+  function timerPause() {
+      clearInterval(timerId)
+      dispatch(pause())
+  }
+
+  function timerToggle() {
+    if (isPlaying) timerPause()
+    else timerPlay()
+  }
+
+  function timerReset() {
+    dispatch(setTime(1500000))
+  }
+
   return (
     <div className="App">
       <Header />
       <div className="content-box">
         <main>
-          <div className="timer-box">
-            <div className="timer-inner-box">
-              <div className="timer-textbox">
-                <h1>STAY<br />FOCUS.</h1>
-                <hr />
-                <h2>00 : 00 : 00</h2>
-              </div>
-            </div>
-          </div>
+          <Timer />
           <div className="controllers">
-            <button disabled>STOP</button>
-            <button>PAUSE</button>
+            <button disabled={isPlaying} onClick={timerReset}>RESET</button>
+            <button id="timer-toggle" type="button" onClick={timerToggle} disabled={timeLeft<1000&&!isPlaying}>{isPlaying ? "PAUSE" : "PLAY"}</button>
           </div>
         </main>
         <aside>
           <h1>CONCENTRATION<br />TIMER</h1>
           <div className="technique-box">
             <h2>POMODORO TECHNIQUE</h2>
-            <p>A method for staying focused and mentally fresh by eating pomodoros - an interval of work time. Four pomodoros form a set. The technique consists of the following steps:<br /><br />
-              Pick a task. {'>'}<br />
-              Set a 25-minutes timer. {'>'}<br />
-              Work on your task until the time is up. {'>'}<br />
-              Take a 5-10 minute break. {'>'}<br />
-              Every 4 pomodoros (set) take a longer 15-30 minutes break. {'>'}<br />
-              Repeat {'>'}
-            </p>
+            {POMODORO_TECHNIQUE}
           </div>
           <div className="playlists-box">
             <h2>PRODUCTIVITY PLAYLISTS</h2>
@@ -48,7 +69,18 @@ function Focus() {
                     <p>youtube.com</p>
                   </div>
                 </div>
-                <a href="youtube.com"><Play size={30} strokeWidth="0.5px" /></a>
+                <a href="https://youtube.com"><Play size={30} strokeWidth="0.5px" /></a>
+              </li>
+              <li className="playlist">
+                <Music size={36} strokeWidth="1px" />
+                <div>
+                  <h3>Fullmetal Alchemist OST lo-fi music</h3>
+                  <div className="playlist-info">
+                    <p>40 : 37</p>
+                    <p>youtube.com</p>
+                  </div>
+                </div>
+                <a href="https://youtube.com"><Play size={30} strokeWidth="0.5px" /></a>
               </li>
             </ul>
             <div className="show-more">

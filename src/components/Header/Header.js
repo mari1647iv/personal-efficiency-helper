@@ -1,6 +1,6 @@
 import './Header.css';
 import { User } from 'react-feather';
-import { ReactComponent as Logo } from "../../assets/check-black.svg"
+import { ReactComponent as Logo } from "../../assets/img/check-black.svg"
 // import Logo from "../../assets/check-black.png"
 import { Link } from 'react-router-dom'
 
