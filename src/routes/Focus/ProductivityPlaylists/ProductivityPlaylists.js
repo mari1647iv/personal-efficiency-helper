@@ -1,4 +1,4 @@
-import '../Focus.css';
+import './ProductivityPlaylists.css';
 import React from 'react';
 import { Music, Play } from 'react-feather';
 
