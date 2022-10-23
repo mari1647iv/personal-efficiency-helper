@@ -1,4 +1,4 @@
-.timer-box {
+.timer {
   width: 85%;
   padding-top: 85%; 
   border-radius: 50%;
@@ -30,6 +30,15 @@
   align-items: flex-end;
 }
 
+.textbox-break-align{
+  align-items: flex-start;
+}
+
+#break {
+  margin-left: -50px;
+  text-align: right;
+}
+
 .timer-textbox h1{
   text-align: left; 
   font-size: 3.5rem;
@@ -39,8 +48,8 @@
 
 .timer-textbox hr {
   border: 1px solid #000000;
-  margin: 10px 0 36px;
-  width: 100%;
+  margin: 10px 0 36px -50px;
+  width: calc(100% + 50px);
 }
 
 .timer-textbox h2 {

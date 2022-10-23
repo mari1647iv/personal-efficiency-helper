@@ -1,36 +1,3 @@
-.controllers {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.controllers button {
-  min-width: 200px;
-  padding: 13px 48px;
-
-  font-weight: 200;
-  font-size: 2rem;
-  line-height: 2.5rem;
-
-  background: #ECECEC;
-  border: none;
-  outline: none;
-}
-
-#timer-toggle {
-  border: 1px solid #929292;
-  outline: 5px solid #ECECEC;
-}
-
-.controllers button:disabled, #timer-toggle:disabled {
-  border:none;
-  outline: none;
-}
-
-.controllers button:focus-visible {
-  border: 2px solid black;
-}
-
 aside h2 {
   font-weight: 300;
   margin-bottom: 18px;
