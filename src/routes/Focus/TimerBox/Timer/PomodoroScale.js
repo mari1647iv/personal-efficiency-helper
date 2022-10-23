@@ -21,7 +21,8 @@ function PomodoroScale() {
       let message = currentPhaseType === 'phase' ? 'Break is over.' : 'Take a break.'
       alert(message)
     }
-  }, [currentPhaseId])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPhaseId, currentPhaseType])
 
   return (
     <div className="pomodoro-scale">
