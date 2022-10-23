@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import TimerBox from './TimerBox/TimerBox';
 import ProductivityPlaylists from './ProductivityPlaylists/ProductivityPlaylists';
-import { POMODORO_TECHNIQUE } from '../../assets/constants';
+import { POMODORO_TECHNIQUE } from '../../utils/constants';
 
 function Focus() {
   return (

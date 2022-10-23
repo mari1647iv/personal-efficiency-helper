@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import {POMODORO_PHASES} from '../../../assets/constants.js';
+import {POMODORO_PHASES} from '../../../utils/constants.js';
 
 
 const initialState = {
@@ -38,9 +38,9 @@ export const timerSlice = createSlice({
         state.time = POMODORO_PHASES[state.id].time
       }
     },
-    switchPhase: (state)=> {
+    setPhase: (state, action)=> {
       state.isPlaying = false
-      state.id += 1
+      state.id = action.payload
       state.type = POMODORO_PHASES[state.id].type
       state.time = POMODORO_PHASES[state.id].time
       state.lastUpdate = new Date()
@@ -48,6 +48,6 @@ export const timerSlice = createSlice({
   }
 })
 
-export const { play, pause, setTime, tick } = timerSlice.actions
+export const { play, pause, setTime, tick, setPhase } = timerSlice.actions
 
 export default timerSlice.reducer

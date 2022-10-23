@@ -1,5 +1,5 @@
 import './TimerBox.css';
-import React from 'react';
+import React, {useEffect} from 'react';
 import Timer from './Timer/Timer';
 import { useSelector, useDispatch } from 'react-redux'
 import { play, pause, setTime, tick } from '../../../store/features/timer/timerSlice';
@@ -10,6 +10,11 @@ function TimerBox() {
   let timeLeft = useSelector((state) => state.timer.time)
   const dispatch = useDispatch()
   let timerId
+
+  useEffect(() => {
+    if (isPlaying) { timerPlay() } 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   function timerPlay() {
       dispatch(play())
@@ -37,7 +42,7 @@ function TimerBox() {
           <Timer />
           <div className="controllers">
             <button disabled={isPlaying} onClick={timerReset}>RESET</button>
-            <button id="timer-toggle" type="button" onClick={timerToggle} disabled={timeLeft<1000&&!isPlaying}>{isPlaying ? "PAUSE" : "PLAY"}</button>
+            <button id={isPlaying?"":"recommended-button"} type="button" onClick={timerToggle} disabled={timeLeft<1000&&!isPlaying}>{isPlaying ? "PAUSE" : "PLAY"}</button>
           </div>
       </div>
   );

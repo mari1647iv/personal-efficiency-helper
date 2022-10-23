@@ -1,22 +1,32 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Main from './routes/Main/Main';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Todo from './routes/Todo/Todo';
 import Focus from './routes/Focus/Focus';
-import { store } from './store/store'
-import { Provider } from 'react-redux'
+import NotFound from './routes/NotFound/NotFound';
+import { store } from './store/store';
+import { Provider } from 'react-redux';
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Todo />,
+    errorElement: <NotFound />
+  },
+  {
+    path: "/todo",
+    element: <Todo/>
+  },
+  {
+    path: "/focus",
+    element: <Focus />
+  },
+]);
 
 function App() {
   return (
     <Provider store={store}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/main" element={<Main />} />
-          <Route path="/focus" element={<Focus />} />
-        </Routes>
-      </Router>
+      <RouterProvider router={router} />
     </Provider>
   );
 }

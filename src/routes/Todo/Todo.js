@@ -1,8 +1,8 @@
-import './Main.css';
+import './Todo.css';
 import React from 'react';
 import Header from '../../components/Header/Header';
 
-function Main() {
+function Todo() {
   return (
     <div className="App">
       <Header />
@@ -20,4 +20,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Todo;
