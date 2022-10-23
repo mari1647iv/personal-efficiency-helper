@@ -14,13 +14,13 @@ function Header() {
       <Logo className="logo" />
       {/* <img className="logo" src={Logo} /> */}
       <div className="shortcuts">
-        <Link to="/" className="link">
-          <h2 className={location === '/' || location === '/main' ? "current" : ""}>TODO</h2>
+        <Link to="/todo" className="link">
+          <h2 className={location === '/todo' ? "current" : ""}>TODO</h2>
         </Link>
         <h2 className={location === '/habits' ? "current" : "disabled"}>HABITS</h2>
         <h2 className={location === '/hacks' ? "current" : "disabled"}>HACKS</h2>
-        <Link to="/focus" className="link">
-          <h2 className={location === '/focus' ? "current" : ""}>FOCUS</h2>
+        <Link to="/" className="link">
+          <h2 className={location === '/' || location === '/focus' ? "current" : ""}>FOCUS</h2>
         </Link>
       </div>
       <User size={40} strokeWidth="0.5px" color="#929292" />

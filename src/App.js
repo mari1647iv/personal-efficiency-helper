@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Todo />,
+    element: <Focus />,
     errorElement: <NotFound />
   },
   {

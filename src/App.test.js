@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders repo link', () => {
+test('renders timer in pause state', () => {
   render(<App />);
-  const linkElement = screen.getByText(/github repository/i);
-  expect(linkElement).toBeInTheDocument();
+  const timerPauseElement = screen.getByText(/rest./i);
+  expect(timerPauseElement).toBeInTheDocument();
 });
