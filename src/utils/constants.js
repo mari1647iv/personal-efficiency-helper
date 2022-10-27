@@ -1,4 +1,4 @@
-export const POMODORO_TECHNIQUE = <p>A method for staying focused and mentally fresh by eating pomodoros - an interval of work time. Four pomodoros form a set. The technique consists of the following steps:<br /><br />Pick a task. {'>'}<br />Set a 25-minutes timer. {'>'}<br />Work on your task until the time is up. {'>'}<br />Take a 5-10 minute break. {'>'}<br />Every 4 pomodoros (set) take a longer 15-30 minutes break. {'>'}<br />Repeat {'>'}</p>;
+export const POMODORO_TECHNIQUE = <p>A method to stay focused and mind-fresh by swallowing <i>pomodoros</i> - working time intervals. 4 pomodoros form <i>a set</i>. The algorithm is as follows:<br /><br />Pick a task. {'>'}<br />Set a 25-minutes timer. {'>'}<br />Work on your task until the time is up. {'>'}<br />Take a 5-10 minute break. {'>'}<br />After every set (4 pomodoros) take a longer 15-30 minutes break. {'>'}<br />Repeat {'>'}</p>;
 
 // let pomodoro = { type: 'phase', time: 1500000 }
 // let shortBreak = { type: 'break', time: 300000 }

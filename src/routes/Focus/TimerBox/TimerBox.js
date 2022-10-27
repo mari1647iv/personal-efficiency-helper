@@ -2,7 +2,7 @@ import './TimerBox.css';
 import React, {useEffect} from 'react';
 import Timer from './Timer/Timer';
 import { useSelector, useDispatch } from 'react-redux'
-import { play, pause, setTime, tick, setPhase } from '../../../store/features/timer/timerSlice';
+import { play, pause, tick, setPhase } from '../../../store/features/timer/timerSlice';
  
 
 function TimerBox() {

@@ -9,6 +9,7 @@ import sound from '../../../../assets/audio/proud.mp3';
 
 function PomodoroScale() {
   let totalTime = POMODORO_PHASES.reduce((sum, phase) => sum + phase.time, 0);
+  let isPlaying = useSelector((state)=>state.timer.isPlaying)
   let currentPhaseType = useSelector((state)=>state.timer.type)
   let currentPhaseId = useSelector((state)=>state.timer.id)
   const [playSound] = useSound(sound)
@@ -18,7 +19,7 @@ function PomodoroScale() {
   useEffect(() => {
     if (isFirstMount.current) {
       isFirstMount.current = false
-    } else {
+    } else if (isPlaying) {
       playSound()
       let message = currentPhaseType === 'phase' ? 'Break is over.' : 'Take a break.'
       alert(message)

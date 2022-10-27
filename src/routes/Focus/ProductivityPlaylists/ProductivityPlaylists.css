@@ -15,28 +15,6 @@
   gap: 8px;
 }
 
-.playlist {
-  width: calc(100% - 50px);
-  padding: 16px 25px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #ECECEC;
-  gap: 25px;
-}
-
-.playlist>div {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.playlist-info {
-  display: flex;
-  gap: 50px;
-  text-transform: lowercase;
-}
-
 .show-more {
   position: relative;
   padding: 9px 0;
@@ -50,4 +28,5 @@
   left: calc(50% - 41px);
   background-color: #F9F9F9;
   text-align: center;
+  cursor: pointer;
 }

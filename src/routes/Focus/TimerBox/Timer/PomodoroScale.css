@@ -10,12 +10,14 @@
   background: #EAEAEA;
   height: 100%;
   margin: 0 1px;
+  cursor: pointer;
 }
 
 .pomodoro-break {
   background: #F1F1F1;
   height: 100%;
   margin: 0 1px;
+  cursor: pointer;
 }
 
 #current-phase {

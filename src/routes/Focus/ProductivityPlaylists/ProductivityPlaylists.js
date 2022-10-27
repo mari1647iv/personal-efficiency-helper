@@ -1,38 +1,37 @@
 import './ProductivityPlaylists.css';
-import React from 'react';
-import { Music, Play } from 'react-feather';
+import React, { useState, useEffect } from 'react';
+import playlistService from '../../../services/playlistService';
+import Playlist from "./Playlist";
 
 function ProductivityPlaylists() {
+  const [playlists, setPlaylists] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [isPartiallyHidden, setIsPartiallyHidden] = useState(true)
+
+  useEffect(() => {
+    setLoading(true)
+    let data = playlistService.getPlaylists()
+    setPlaylists(data)
+    setLoading(false)
+  }, [loading, playlists])
+
+  function showHide() {
+    setIsPartiallyHidden(!isPartiallyHidden)
+  }
+
   return (
     <div className="playlists-box">
       <h2>PRODUCTIVITY PLAYLISTS</h2>
-      <ul className="playlists">
-        <li className="playlist">
-          <Music size={36} strokeWidth="1px" />
-          <div>
-            <h3>Fullmetal Alchemist OST lo-fi music</h3>
-            <div className="playlist-info">
-              <p>40 : 37</p>
-              <p>youtube.com</p>
-            </div>
-          </div>
-          <a href="https://youtube.com"><Play size={30} strokeWidth="0.5px" /></a>
-        </li>
-        <li className="playlist">
-          <Music size={36} strokeWidth="1px" />
-          <div>
-            <h3>Fullmetal Alchemist OST lo-fi music</h3>
-            <div className="playlist-info">
-              <p>40 : 37</p>
-              <p>youtube.com</p>
-            </div>
-          </div>
-          <a href="https://youtube.com"><Play size={30} strokeWidth="0.5px" /></a>
-        </li>
-      </ul>
-      <div className="show-more">
+      {!loading && !!playlists && (
+        <ul className="playlists">
+          {playlists.slice(0, isPartiallyHidden ? 2 : undefined).map((playlist) => (
+            <Playlist playlist={playlist} />
+          ))}
+        </ul>
+      )}
+      <div className="show-more" onClick={showHide}>
         <hr />
-        <p>+ more</p>
+        <p>{isPartiallyHidden ? "+ more +" : "— less —"}</p>
       </div>
     </div>
   );
