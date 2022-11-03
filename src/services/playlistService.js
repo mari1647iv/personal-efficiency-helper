@@ -1,5 +1,7 @@
+import axios from 'axios';
+
 class PlaylistService {
-  API_ENDPOINT = 'http://localhost:3003'
+  API_ENDPOINT = 'http://localhost:3002'
 
   PLAYLISTS = [
     {
@@ -22,14 +24,29 @@ class PlaylistService {
     },
     {
       id: 3,
+      name: 'Fullmetal Alchemist Beautiful Music | Best Anime OST',
+      url: 'https://www.youtube.com/watch?v=CZPul4k9bUU&list=PL3Rp4H5bk4_qV2ZjUrc-C8BZhv9UdZL5F&index=1&t=5s',
+      duration: '24:31'
+    },
+    {
+      id: 4,
       name: 'Прогулка наедине с собой',
       url: 'https://music.yandex.ru/users/music-blog/playlists/1687',
       duration: '2:57:00'
+    },
+    {
+      id: 5,
+      name: 'FullMetal Alchemist Brotherhood - lofi hip hop mix 1 HOUR EDITION',
+      url: 'https://www.youtube.com/watch?v=O4y5ScLPQ0Q&list=PL3Rp4H5bk4_qV2ZjUrc-C8BZhv9UdZL5F&index=6&t=927s',
+      duration: '59:58'
     }
   ]
 
-  getPlaylists() {
-    return this.PLAYLISTS
+  async getPlaylists() {
+    let resp = await axios.get("http://localhost:3002/playlists")
+    const data = resp.data.data.playlists
+    console.log(data)
+    return data
   }
 
   getPlaylistById(id) {

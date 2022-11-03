@@ -9,11 +9,14 @@ function ProductivityPlaylists() {
   const [isPartiallyHidden, setIsPartiallyHidden] = useState(true)
 
   useEffect(() => {
+    async function fetchPlaylists() {
+      const data = await playlistService.getPlaylists()
+      setPlaylists(data)
+    }
     setLoading(true)
-    let data = playlistService.getPlaylists()
-    setPlaylists(data)
+    fetchPlaylists()
     setLoading(false)
-  }, [loading, playlists])
+  }, [])
 
   function showHide() {
     setIsPartiallyHidden(!isPartiallyHidden)
