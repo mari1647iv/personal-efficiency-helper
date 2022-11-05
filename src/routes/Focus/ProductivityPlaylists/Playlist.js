@@ -17,7 +17,7 @@ function Playlist(props) {
   }
 
   return (
-    <li className="playlist" key={playlist.id} >
+    <li className="playlist" >
       {getIcon(getUrlSource(playlist.url))}
       <div>
         <h3 className="ticker">{playlist.name}</h3>
