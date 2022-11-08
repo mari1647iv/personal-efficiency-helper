@@ -8,7 +8,7 @@ function NotFound() {
       <Header />
       <div className="content-box">
         <main>
-          <h1 style={{"font-weight":"300"}}>404<br />Page Not Found</h1>
+          <h1 style={{ fontWeight: 300 }}>404<br />Page Not Found</h1>
           <Problem />
         </main>
       </div>

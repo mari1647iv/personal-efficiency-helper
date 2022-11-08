@@ -56,6 +56,13 @@ npm i
 
 ### Installation <a name = "installation"></a>
 
+Run this script to start the server
+
+```node
+  cd api
+  node .
+```
+
 Start the application
 
 ```npm
@@ -133,5 +140,5 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 [tag-url]: https://github.com/mari1647iv/personal-efficiency-helper/tags
 [powered-shield]: https://forthebadge.com/images/badges/powered-by-coffee.svg
 [build-shield]: https://forthebadge.com/images/badges/built-with-love.svg
-[made-shield]: https://forthebadge.com/images/badges/made-with-javascript.svg?style=for-the-badge
+[made-shield]: https://forthebadge.com/images/badges/made-with-typescript.svg?style=for-the-badge
 [forthebadge-url]: https://forthebadge.com

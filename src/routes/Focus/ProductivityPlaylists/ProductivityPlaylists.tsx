@@ -2,9 +2,10 @@ import './ProductivityPlaylists.css';
 import React, { useState, useEffect } from 'react';
 import playlistService from '../../../services/playlistService';
 import Playlist from "./Playlist";
+import { PlaylistInterface } from '../../../types/types';
 
 function ProductivityPlaylists() {
-  const [playlists, setPlaylists] = useState([])
+  const [playlists, setPlaylists] = useState<PlaylistInterface[] | undefined>(undefined)
   const [loading, setLoading] = useState(true)
   const [isPartiallyHidden, setIsPartiallyHidden] = useState(true)
 

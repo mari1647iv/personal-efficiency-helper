@@ -1,17 +1,19 @@
 const express = require('express');
+const cors = require("cors");
 const bodyParser = require("body-parser");
-const fs = require('fs')
+const fs = require('fs');
+
 const app = express();
 const port = 3002;
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors())
 
 app.get('/playlists', (req, res) => {
   let rawData = fs.readFileSync('mocks/playlists/success.json')
   let jsonData = JSON.parse(rawData)
-  res.header("Access-Control-Allow-Origin", "*");
   res.send(jsonData);
 });
 
@@ -23,7 +25,6 @@ app.post('/playlists', (req, res) => {
   let data = JSON.stringify(jsonData);
   fs.writeFileSync('mocks/playlists/success.json', data);
 
-  res.header("Access-Control-Allow-Origin", "*");
   res.send(jsonData.data.playlists);
 })
 
@@ -37,7 +38,6 @@ app.delete('/playlists', (req, res) => {
   let data = JSON.stringify(jsonData);
   fs.writeFileSync('mocks/playlists/success.json', data);
 
-  res.header("Access-Control-Allow-Origin", "*");
   res.send(deleted)
 })
 

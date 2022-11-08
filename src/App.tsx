@@ -1,5 +1,5 @@
-import './App.css';
 import React from 'react';
+import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Todo from './routes/Todo/Todo';
 import Focus from './routes/Focus/Focus';
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/todo",
-    element: <Todo/>
+    element: <Todo />
   },
   {
     path: "/focus",

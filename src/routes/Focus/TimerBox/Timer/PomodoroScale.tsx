@@ -1,7 +1,8 @@
 import './PomodoroScale.css';
-import React, {useEffect, useRef} from 'react';
+import React, { useEffect, useRef } from 'react';
 import { POMODORO_PHASES } from '../../../../utils/constants';
-import { useSelector, useDispatch } from 'react-redux';
+import { useAppSelector } from '../../../../hooks/useAppSelector';
+import { useAppDispatch } from '../../../../hooks/useAppDispatch';
 import { setPhase } from '../../../../store/features/timer/timerSlice';
 import useSound from 'use-sound';
 import sound from '../../../../assets/audio/proud.mp3';
@@ -9,12 +10,12 @@ import sound from '../../../../assets/audio/proud.mp3';
 
 function PomodoroScale() {
   let totalTime = POMODORO_PHASES.reduce((sum, phase) => sum + phase.time, 0);
-  let isPlaying = useSelector((state)=>state.timer.isPlaying)
-  let currentPhaseType = useSelector((state)=>state.timer.type)
-  let currentPhaseId = useSelector((state)=>state.timer.id)
+  let isPlaying = useAppSelector((state) => state.timer.isPlaying)
+  let currentPhaseType = useAppSelector((state) => state.timer.type)
+  let currentPhaseId = useAppSelector((state) => state.timer.id)
   const [playSound] = useSound(sound)
   let isFirstMount = useRef(true)
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
     if (isFirstMount.current) {
@@ -27,14 +28,14 @@ function PomodoroScale() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPhaseId, currentPhaseType])
 
-  function switchPhase(id) {
+  function switchPhase(id: number) {
     dispatch(setPhase(id))
   }
 
   return (
     <div className="pomodoro-scale">
       {POMODORO_PHASES.map((phase) => (
-        <div key={phase.id} id={currentPhaseId===phase.id?"current-phase":phase.id} className={"pomodoro-"+phase.type} style={{width:(100*phase.time/totalTime)+"%"}} onClick={()=>switchPhase(phase.id)}></div>
+        <div key={phase.id} id={currentPhaseId === phase.id ? "current-phase" : phase.id.toString()} className={"pomodoro-" + phase.type} style={{ width: (100 * phase.time / totalTime) + "%" }} onClick={() => switchPhase(phase.id)}></div>
       ))}
     </div>
   );

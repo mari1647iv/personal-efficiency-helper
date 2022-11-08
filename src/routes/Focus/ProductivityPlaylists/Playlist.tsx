@@ -1,14 +1,14 @@
-import './ProductivityPlaylists.css';
-import './Playlist.css';
 import React from 'react';
+import './Playlist.css';
 import { Youtube, Music, Play } from 'react-feather';
 import getUrlSource from '../../../utils/getUrlSource';
 import { ReactComponent as YaMusic } from '../../../assets/img/ya-music-icon-black.svg';
+import { PlaylistInterface } from '../../../types/types';
 
-function Playlist(props) {
+function Playlist(props: { playlist: PlaylistInterface }) {
   const { playlist } = props
 
-  function getIcon(src) {
+  function getIcon(src: string) {
     switch (src) {
       case 'youtube.com': return (<Youtube size={36} strokeWidth="1px" />)
       case 'music.yandex.ru': return (<YaMusic className="ya-music-icon" />)

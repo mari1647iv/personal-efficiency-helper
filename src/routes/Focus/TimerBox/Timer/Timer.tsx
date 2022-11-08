@@ -1,24 +1,24 @@
 import './Timer.css';
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '../../../../hooks/useAppSelector';
 import PomodoroScale from "./PomodoroScale";
 
 function Timer() {
-  let isPlaying = useSelector((state)=> state.timer.isPlaying)
-  let currentTime = useSelector((state) => state.timer.time)
-  let currentPhaseType = useSelector((state) => state.timer.type)
+  let isPlaying = useAppSelector((state) => state.timer.isPlaying)
+  let currentTime = useAppSelector((state) => state.timer.time)
+  let currentPhaseType = useAppSelector((state) => state.timer.type)
 
-  function formatTime(time) {
+  function formatTime(time: number) {
     return time < 10 ? '0' + time : time;
   }
 
   return (
     <div className="timer">
       <div className="timer-inner-box">
-        <div className={`timer-textbox ${isPlaying && (currentPhaseType==="phase") ? "": "textbox-break-align"}`}>
+        <div className={`timer-textbox ${isPlaying && (currentPhaseType === "phase") ? "" : "textbox-break-align"}`}>
           <div className="motivation">
-            {isPlaying && (currentPhaseType==="phase") ?
-              <h1 id="focus">STAY<br />FOCUS.</h1>:
+            {isPlaying && (currentPhaseType === "phase") ?
+              <h1 id="focus">STAY<br />FOCUS.</h1> :
               <h1 id="break"><span>REST.</span><br />NOT QUIT.</h1>
             }
           </div>
