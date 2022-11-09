@@ -1,6 +1,0 @@
-{
-  "status": 500,
-  "data": {
-    "error": "API Error 500 Status Code: Internal Server Error"
-  }
-}

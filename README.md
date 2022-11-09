@@ -20,6 +20,10 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a>
+      <ul>
         <li><a href="#scripts">Available Scripts</a></li>
       </ul>
     </li>
@@ -31,6 +35,10 @@
 ## About <a name = "about"></a>
 
 The assistant to improve your personal efficiency on the daily basis. The application contains ToDo planner, habits tracker, concentration keeper, as well as statistics, personal efficiency hacks and recommendations. 
+
+* Client: Typescript+React
+* Server: Express.js<!--, PostgreSQL-->
+
 
 ## Design Mockups <a name = "design"></a>
 
@@ -48,32 +56,64 @@ Download the project from GitHub
 git clone https://github.com/mari1647iv/personal-efficiency-helper.git
 ```
 
+Ensure you have a running PostgreSQL server
+
+```bash
+sudo apt update
+sudo apt install postgresql postgresql-contrib postgresql-client
+sudo systemctl start postgesql.service
+```
+
 Install the necessary dependecies using `npm`
 
 ```npm
+cd client
 npm i
+cd ../server
+npm i
+cd..
 ```
 
 ### Installation <a name = "installation"></a>
 
+Create user and database for the application
+
+```bash
+sudo -iu posrgres
+createuser --pwprompt pefuser
+createdb -O pefuser pefdb
+```
+You can access the database from ```pefuser``` shell 
+```bash
+su - pefuser
+psql pefdb
+``` 
+or from another OS username:
+```bash
+psql -d pefdb -h localhost -U pefuser -W
+```
+
 Run this script to start the server
 
 ```node
-  cd api
-  node .
+cd server
+npm run ts-dev
 ```
 
-Start the application
+Start the client application
 
 ```npm
+cd client
 npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+## Usage <a name = "usage"></a>
+
 ### Available Scripts <a name = "scripts"></a>
 
-In the project directory, you can run:
+In the client directory, you can run:
 
 #### `npm start`
 
@@ -94,18 +134,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-<!-- ### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-
-### Making a Progressive Web App
+<!-- ### Making a Progressive Web App
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app) -->
 

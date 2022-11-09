@@ -1,5 +1,5 @@
 {
-  "name": "personal-efficiency-helper",
+  "name": "personal-efficiency-helper-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,10 +12,6 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "axios": "^1.1.3",
-    "body-parser": "^1.20.1",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "fs": "^0.0.1-security",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
@@ -23,7 +19,7 @@
     "react-redux": "^8.0.4",
     "react-router": "^6.4.2",
     "react-router-dom": "^6.4.2",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "redux": "^4.2.0",
     "typescript": "^4.8.4",
     "use-sound": "^4.0.1",

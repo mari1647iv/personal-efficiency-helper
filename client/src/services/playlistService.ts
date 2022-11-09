@@ -6,14 +6,15 @@ class PlaylistService {
 
   async getPlaylists() {
     let resp = await axios.get("http://localhost:3002/playlists")
-    const data: (PlaylistInterface[] | undefined) = resp.data.data.playlists
+    console.log(resp)
+    const data: (PlaylistInterface[] | undefined) = resp.data
     console.log(data)
     return data
   }
 
   async getPlaylistById(id: number) {
     let resp = await axios.get("http://localhost:3002/playlists")
-    const data: (PlaylistInterface[] | undefined) = resp.data.data.playlists
+    const data: (PlaylistInterface[] | undefined) = resp.data
     console.log(data)
     return !!data ? data.find((element) => {
       return element.id === id

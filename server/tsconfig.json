@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "rootDir": "./", /* Specify the root folder within your source files. */
+    "moduleResolution": "node", /* Specify how TypeScript looks up a file from a given module specifier. */
+    "outDir": "./", /* Specify an output folder for all emitted files. */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "types/"
+    ]
+  },
+  "include": [
+    "api",
+    "db",
+    "types"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
