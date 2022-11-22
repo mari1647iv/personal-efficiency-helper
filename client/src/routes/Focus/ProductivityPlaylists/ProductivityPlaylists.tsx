@@ -1,23 +1,13 @@
 import './ProductivityPlaylists.css';
-import React, { useState, useEffect } from 'react';
-import playlistService from '../../../services/playlistService';
+import React, { useState, useContext } from 'react';
 import Playlist from "./Playlist";
-import { PlaylistInterface } from '../../../types/types';
+import { Plus } from 'react-feather';
+import Button from '../../../components/Button/Button';
+import { FocusContext } from '../FocusContext';
 
 function ProductivityPlaylists() {
-  const [playlists, setPlaylists] = useState<PlaylistInterface[] | undefined>(undefined)
-  const [loading, setLoading] = useState(true)
   const [isPartiallyHidden, setIsPartiallyHidden] = useState(true)
-
-  useEffect(() => {
-    async function fetchPlaylists() {
-      const data = await playlistService.getPlaylists()
-      setPlaylists(data)
-    }
-    setLoading(true)
-    fetchPlaylists()
-    setLoading(false)
-  }, [])
+  const { playlists, togglePlaylistForm } = useContext(FocusContext)!;
 
   function showHide() {
     setIsPartiallyHidden(!isPartiallyHidden)
@@ -25,8 +15,13 @@ function ProductivityPlaylists() {
 
   return (
     <div className="playlists-box">
-      <h2>PRODUCTIVITY PLAYLISTS</h2>
-      {!loading && !!playlists && (
+      <div className="playlists-header">
+        <h2>PRODUCTIVITY PLAYLISTS</h2>
+        <Button variant="icon" onClick={() => togglePlaylistForm()}>
+          <Plus size={40} strokeWidth="1px" />
+        </Button>
+      </div>
+      {!!playlists && (
         <ul className="playlists">
           {playlists.slice(0, isPartiallyHidden ? 2 : undefined).map((playlist) => (
             <Playlist playlist={playlist} key={playlist.id} />

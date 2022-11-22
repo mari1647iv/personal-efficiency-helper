@@ -4,3 +4,9 @@ export interface PlaylistInterface {
   url: string,
   duration: string
 }
+
+export interface PlaylistDataInterface {
+  name: string,
+  url: string,
+  duration: string
+}

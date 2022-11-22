@@ -4,6 +4,7 @@ import Timer from './Timer/Timer';
 import { play, pause, tick, setPhase } from '../../../store/features/timer/timerSlice';
 import { useAppSelector } from '../../../hooks/useAppSelector';
 import { useAppDispatch } from '../../../hooks/useAppDispatch';
+import Button from '../../../components/Button/Button';
 
 
 function TimerBox() {
@@ -42,8 +43,8 @@ function TimerBox() {
     <div className="timer-box">
       <Timer />
       <div className="controllers">
-        <button onClick={timerReset}>RESET</button>
-        <button id={isPlaying ? "" : "recommended-button"} type="button" onClick={timerToggle} disabled={timeLeft < 1000 && !isPlaying}>{isPlaying ? "PAUSE" : "PLAY"}</button>
+        <Button variant="flat" onClick={timerReset}>RESET</Button>
+        <Button variant={isPlaying ? "default" : "recommended"} onClick={timerToggle} disabled={timeLeft < 1000 && !isPlaying}>{isPlaying ? "PAUSE" : "PLAY"}</Button>
       </div>
     </div>
   );

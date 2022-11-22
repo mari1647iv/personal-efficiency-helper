@@ -7,6 +7,17 @@
   gap: 10px;
 }
 
+.playlists-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.playlists-header h2 {
+  font-weight: 300;
+}
+
 .playlists {
   display: flex;
   flex-direction: column;

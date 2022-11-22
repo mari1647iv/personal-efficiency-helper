@@ -1,0 +1,43 @@
+.button {
+  font-weight: 200;
+
+  background: #ECECEC;
+  border: 1px solid #ECECEC;
+  outline: none;
+}
+
+.button:hover {
+  background: #DDDDDD;
+}
+
+.button:active {
+  background: #DDDDDD;
+  border: 1px solid black;
+}
+
+.button:focus-visible {
+  border: 2px solid black;
+}
+
+.button:disabled {
+  background: transparent;
+  border: 1px solid #CECECE;
+  outline: none;
+}
+
+.flat-button {
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  padding: 13px 48px;
+  min-width: 200px;
+}
+
+.recommended-button {
+  border: 1px solid #929292;
+  outline: 5px solid #ECECEC;
+}
+
+.icon-button {
+  padding: 2px;
+}

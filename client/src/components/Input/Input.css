@@ -1,0 +1,27 @@
+.Input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.Input > input {
+  padding: 7px 15px;
+  border: 1px solid #929292;
+  background: #ECECEC;
+
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+}
+
+/* .Input > input::placeholder, 
+.Input > input::-webkit-input-placeholder , 
+.Input > input::-moz-placeholder, 
+.Input > input:-moz-placeholder, 
+.Input > input:-ms-input-placeholder {
+
+} */
