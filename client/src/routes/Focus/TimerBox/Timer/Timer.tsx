@@ -25,6 +25,7 @@ function Timer() {
           <hr />
           <h2>00 : {formatTime(Math.floor(currentTime / 60000))} : {formatTime(Math.floor((currentTime % 60000) / 1000))}</h2>
           <PomodoroScale />
+          <p>click to switch the phase</p>
         </div>
       </div>
     </div>

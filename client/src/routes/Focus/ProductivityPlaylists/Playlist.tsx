@@ -6,6 +6,7 @@ import { ReactComponent as YaMusic } from '../../../assets/img/ya-music-icon-bla
 import { PlaylistInterface } from '../../../types/types';
 import playlistService from '../../../services/playlistService';
 import { FocusContext } from '../FocusContext';
+import Button from '../../../components/Button/Button';
 
 function Playlist(props: { playlist: PlaylistInterface }) {
   const { playlist } = props
@@ -36,8 +37,14 @@ function Playlist(props: { playlist: PlaylistInterface }) {
           <p>{getUrlSource(playlist.url)}</p>
         </div>
       </div>
-      <button type="button" onClick={() => { onDelete(playlist.id) }}><Trash size={30} strokeWidth="0.5px" /></button>
-      <a href={playlist.url}><Play size={30} strokeWidth="0.5px" /></a>
+      <Button variant="icon" onClick={() => { onDelete(playlist.id) }}>
+        <Trash size={30} strokeWidth="0.5px" />
+      </Button>
+      <a href={playlist.url} target="_blank">
+        <Button variant="icon" onClick={() => { onDelete(playlist.id) }}>
+          <Play size={30} strokeWidth="0.5px" />
+        </Button>
+      </a>
     </li>
   );
 }

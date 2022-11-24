@@ -44,7 +44,7 @@ function TimerBox() {
       <Timer />
       <div className="controllers">
         <Button variant="flat" onClick={timerReset}>RESET</Button>
-        <Button variant={isPlaying ? "default" : "recommended"} onClick={timerToggle} disabled={timeLeft < 1000 && !isPlaying}>{isPlaying ? "PAUSE" : "PLAY"}</Button>
+        <Button variant={isPlaying ? "flat" : "recommended"} onClick={timerToggle} disabled={timeLeft < 1000 && !isPlaying}>{isPlaying ? "PAUSE" : "PLAY"}</Button>
       </div>
     </div>
   );

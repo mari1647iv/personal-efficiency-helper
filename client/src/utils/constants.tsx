@@ -9,13 +9,13 @@ export const POMODORO_TECHNIQUE = (
 // let longBreak = { type: 'break', time: 900000 }
 
 export const POMODORO_PHASES = [
-  { id: 0, type: 'phase', time: 1500000 },
+  { id: 0, type: 'focus', time: 1500000 },
   { id: 1, type: 'break', time: 300000 },
-  { id: 2, type: 'phase', time: 1500000 },
+  { id: 2, type: 'focus', time: 1500000 },
   { id: 3, type: 'break', time: 300000 },
-  { id: 4, type: 'phase', time: 1500000 },
+  { id: 4, type: 'focus', time: 1500000 },
   { id: 5, type: 'break', time: 300000 },
-  { id: 6, type: 'phase', time: 1500000 },
+  { id: 6, type: 'focus', time: 1500000 },
   { id: 7, type: 'break', time: 900000 }
 ]
 

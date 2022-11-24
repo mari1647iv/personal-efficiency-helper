@@ -35,7 +35,7 @@ function PomodoroScale() {
   return (
     <div className="pomodoro-scale">
       {POMODORO_PHASES.map((phase) => (
-        <div key={phase.id} id={currentPhaseId === phase.id ? "current-phase" : phase.id.toString()} className={"pomodoro-" + phase.type} style={{ width: (100 * phase.time / totalTime) + "%" }} onClick={() => switchPhase(phase.id)}></div>
+        <div key={phase.id} id={currentPhaseId === phase.id ? "current-phase" : phase.id.toString()} className={"pomodoro-phase pomodoro-" + phase.type} style={{ width: (100 * phase.time / totalTime) + "%" }} onClick={() => switchPhase(phase.id)} tabIndex={0}></div>
       ))}
     </div>
   );
