@@ -40,8 +40,8 @@ function Playlist(props: { playlist: PlaylistInterface }) {
       <Button variant="icon" onClick={() => { onDelete(playlist.id) }}>
         <Trash size={30} strokeWidth="0.5px" />
       </Button>
-      <a href={playlist.url} target="_blank">
-        <Button variant="icon" onClick={() => { onDelete(playlist.id) }}>
+      <a href={playlist.url} target="_blank" rel="noopener noreferrer">
+        <Button variant="icon">
           <Play size={30} strokeWidth="0.5px" />
         </Button>
       </a>
