@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Todo from './routes/Todo/Todo';
+import Hacks from './routes/Hacks/Hacks';
 import Focus from './routes/Focus/Focus';
 import NotFound from './routes/NotFound/NotFound';
 import { store } from './store/store';
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/todo",
     element: <Todo />
+  },
+  {
+    path: "/hacks",
+    element: <Hacks />
   },
   {
     path: "/focus",

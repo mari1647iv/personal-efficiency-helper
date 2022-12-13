@@ -18,7 +18,9 @@ function Header() {
           <h2 className={location === '/todo' ? "current" : ""}>TODO</h2>
         </Link>
         <h2 className={location === '/habits' ? "current" : "disabled"}>HABITS</h2>
-        <h2 className={location === '/hacks' ? "current" : "disabled"}>HACKS</h2>
+        <Link to="/hacks" className="link">
+          <h2 className={location === '/hacks' ? "current" : ""}>HACKS</h2>
+        </Link>
         <Link to="/" className="link">
           <h2 className={location === '/' || location === '/focus' ? "current" : ""}>FOCUS</h2>
         </Link>

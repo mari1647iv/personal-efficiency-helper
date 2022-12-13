@@ -1,0 +1,25 @@
+.hacks-title {
+  text-align: right;
+  padding-right: 15px;
+  border-right: 7px solid #ECECEC;
+  margin-bottom: 20px;
+
+}
+
+.tip-box {
+  width: calc(100% - 40px);
+  padding: 30px;
+  background: #ECECEC;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tip-box > h2 {
+  padding-bottom: 5px;
+  border-bottom: 4px solid #CECECE;
+}
+
+.tip-box > p {
+  padding-right: 55px;
+}
