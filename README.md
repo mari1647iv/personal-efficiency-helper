@@ -34,10 +34,10 @@
 
 ## About <a name = "about"></a>
 
-The assistant to improve your personal efficiency on the daily basis. The application contains ToDo planner, habits tracker, concentration keeper, as well as statistics, personal efficiency hacks and recommendations. 
+The assistant to improve your personal efficiency on the daily basis. Current application version contains concentration keeper, playlists for productive work, personal efficiency hacks, and recommendations. ToDo planner, habits tracker, and personal statistics are planned for development.
 
 * Client: Typescript+React
-* Server: Express.js<!--, PostgreSQL-->
+* Server: Express.js, PostgreSQL
 
 
 ## Design Mockups <a name = "design"></a>
