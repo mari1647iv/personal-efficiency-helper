@@ -93,6 +93,13 @@ or from another OS username:
 psql -d pefdb -h localhost -U pefuser -W
 ```
 
+Setup the database
+
+```node
+cd server
+npm run db-setup
+```
+
 Run this script to start the server
 
 ```node
