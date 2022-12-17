@@ -37,7 +37,7 @@ function Playlist(props: { playlist: PlaylistInterface }) {
           <p>{getUrlSource(playlist.url)}</p>
         </div>
       </div>
-      <Button variant="icon" onClick={() => { onDelete(playlist.id) }}>
+      <Button variant="icon" onClick={() => { onDelete(playlist._id) }}>
         <Trash size={30} strokeWidth="0.5px" />
       </Button>
       <a href={playlist.url} target="_blank" rel="noopener noreferrer">

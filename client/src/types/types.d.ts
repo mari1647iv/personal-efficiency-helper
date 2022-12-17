@@ -1,5 +1,5 @@
 export interface PlaylistInterface {
-  id: number,
+  _id: number,
   name: string,
   url: string,
   duration: string

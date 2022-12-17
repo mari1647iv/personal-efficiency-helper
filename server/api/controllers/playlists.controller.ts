@@ -1,10 +1,14 @@
 import pool from "../../db/database";
 import { Request, Response } from "express";
-import { PlaylistInterface } from '../../types/types';
+import {
+  getPlaylistsQuery,
+  insertPlaylistQuery,
+  deletePlaylistQuery,
+} from "../queries/playlists.queries"
 
 const getPlaylists = async (req: Request, res: Response) => {
   try {
-    const playlists = await pool.query("SELECT * FROM playlists")
+    const playlists = await pool.query(getPlaylistsQuery)
     res.status(200).json(playlists.rows)
   } catch (err: any) {
     console.error(`Error in getting playlists from db: ${err}`)
@@ -15,9 +19,9 @@ const getPlaylists = async (req: Request, res: Response) => {
 const createPlaylist = async (req: Request, res: Response) => {
   try {
     const { name, url, duration } = req.body
-    await pool.query("INSERT INTO playlists (name, url, duration) VALUES($1, $2, $3)", [name, url, duration])
+    await pool.query(insertPlaylistQuery, [name, url, duration])
     try {
-      const playlists = await pool.query("SELECT * FROM playlists")
+      const playlists = await pool.query(getPlaylistsQuery)
       res.status(200).json(playlists.rows)
     } catch (getError: any) {
       console.error(`Error in getting playlists from db: ${getError}`)
@@ -33,7 +37,7 @@ const deletePlaylist = async (req: Request, res: Response) => {
   const id = parseInt(req.params.id)
 
   try {
-    await pool.query("DELETE FROM playlists WHERE id = $1", [id])
+    await pool.query(deletePlaylistQuery, [id])
     res.status(200).json(`Playlist with id=${id} deleted`)
   } catch (err: any) {
     console.error(`Error in deliting playlist from db: ${err}`)

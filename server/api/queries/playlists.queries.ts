@@ -16,4 +16,8 @@ export const insertPlaylists = `
          ('Прогулка наедине с собой', 'https://music.yandex.ru/users/music-blog/playlists/1687', '2 : 57 : 00');
 `;
 
+export const getPlaylistsQuery = `SELECT * FROM playlists`;
+export const insertPlaylistQuery = `INSERT INTO playlists (name, url, duration) VALUES($1, $2, $3)`;
+export const deletePlaylistQuery = `DELETE FROM playlists WHERE _id = $1`;
+
 export const dropPlaylistsTable = 'DROP TABLE playlists';

@@ -17,7 +17,7 @@ class PlaylistService {
     const data: (PlaylistInterface[] | undefined) = resp.data
     console.log(data)
     return !!data ? data.find((element) => {
-      return element.id === id
+      return element._id === id
     }) : data
   }
 

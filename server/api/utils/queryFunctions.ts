@@ -3,7 +3,7 @@ import {
   insertPlaylists,
   dropPlaylistsTable,
   createPlaylistsTable,
-} from './playlists.queries';
+} from '../queries/playlists.queries';
 
 export const executeQueryArray = async (arr: any) => new Promise<void>(resolve => {
   const stop = arr.length;

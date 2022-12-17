@@ -24,7 +24,7 @@ function ProductivityPlaylists() {
       {!!playlists && (
         <ul className="playlists">
           {playlists.slice(0, isPartiallyHidden ? 2 : undefined).map((playlist) => (
-            <Playlist playlist={playlist} key={playlist.id} />
+            <Playlist playlist={playlist} key={playlist._id} />
           ))}
         </ul>
       )}
