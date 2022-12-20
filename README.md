@@ -1,5 +1,6 @@
 [![Tag][tag-shield]][tag-url]
 [![CI][workflow-shield]][workflow-url]
+[![Stars][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 <!-- [![Contributors][contributors-shield]][contributors-url] -->
@@ -168,6 +169,8 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 [workflow-url]: https://github.com/mari1647iv/personal-efficiency-helper/actions/workflows/node.js.yml
 <!-- [contributors-shield]: https://img.shields.io/github/contributors/mari1647iv/personal-efficiency-helper.svg?style=for-the-badge
 [contributors-url]: https://github.com/mari1647iv/personal-efficiency-helper/graphs/contributors -->
+[stars-shield]: https://img.shields.io/github/stars/mari1647iv/personal-efficiency-helper.svg?style=for-the-badge
+[stars-url]: https://github.com/mari1647iv/personal-efficiency-helper/stargazers
 [issues-shield]: https://img.shields.io/github/issues/mari1647iv/personal-efficiency-helper.svg?style=for-the-badge
 [issues-url]: https://github.com/mari1647iv/personal-efficiency-helper/issues
 [license-shield]: https://img.shields.io/github/license/mari1647iv/personal-efficiency-helper.svg?color=orange&style=for-the-badge
