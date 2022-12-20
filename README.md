@@ -94,6 +94,16 @@ or from another OS username:
 psql -d pefdb -h localhost -U pefuser -W
 ```
 
+Create file ```.env``` in the ```./server``` folder and put there your database credentials in the following format:
+
+```
+POSTGRESQL_HOST = 
+POSTGRESQL_PORT = 
+POSTGRESQL_USER = 
+POSTGRESQL_DATABASE =  
+POSTGRESQL_PASSWORD = 
+```
+
 Setup the database
 
 ```node
