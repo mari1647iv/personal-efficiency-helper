@@ -6,16 +6,19 @@ function Todo() {
   return (
     <div className="App">
       <Header />
-      <main>
-        <a
-          className="repo-link"
-          href="https://github.com/mari1647iv/personal-efficiency-helper"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub Repository
-        </a>
-      </main>
+      <div className="content-box">
+        <aside>
+          <h1 className="todo-title">JUST DO IT.</h1>
+          <a
+            className="repo-link"
+            href="https://github.com/mari1647iv/personal-efficiency-helper"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub Repository
+          </a>
+        </aside>
+      </div>
     </div>
   );
 }

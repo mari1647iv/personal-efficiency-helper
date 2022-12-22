@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "./NewPlaylistForm.css"
 import Modal from "../../../components/Modal/Modal";
 import Button from "../../../components/Button/Button";
 import { FocusContext } from '../FocusContext';

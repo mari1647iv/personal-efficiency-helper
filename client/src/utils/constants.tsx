@@ -4,10 +4,6 @@ export const POMODORO_TECHNIQUE = (
   </p>
 );
 
-// let pomodoro = { type: 'phase', time: 1500000 }
-// let shortBreak = { type: 'break', time: 300000 }
-// let longBreak = { type: 'break', time: 900000 }
-
 export const POMODORO_PHASES = [
   { id: 0, type: 'focus', time: 1500000 },
   { id: 1, type: 'break', time: 300000 },

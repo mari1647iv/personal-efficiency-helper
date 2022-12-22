@@ -1,5 +1,5 @@
 import './Focus.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Header from '../../components/Header/Header';
 import TimerBox from './TimerBox/TimerBox';
 import ProductivityPlaylists from './ProductivityPlaylists/ProductivityPlaylists';
@@ -24,16 +24,19 @@ function Focus() {
     //setLoading(false)
   }, [])
 
-  function togglePlaylistForm() {
-    setIsPlaylistForm(!isPlaylistForm)
-  }
+  const value: FocusContextValue = useMemo(() => {
 
-  const value: FocusContextValue = {
-    playlists,
-    setPlaylists,
-    isPlaylistForm,
-    togglePlaylistForm
-  }
+    function togglePlaylistForm() {
+      setIsPlaylistForm(!isPlaylistForm)
+    }
+
+    return {
+      playlists,
+      setPlaylists,
+      isPlaylistForm,
+      togglePlaylistForm
+    }
+  }, [playlists, isPlaylistForm]);
 
   return (
     <div className="App">
