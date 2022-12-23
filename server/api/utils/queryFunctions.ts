@@ -4,6 +4,11 @@ import {
   dropPlaylistsTable,
   createPlaylistsTable,
 } from '../queries/playlists.queries';
+import {
+  insertTodos,
+  dropTodosTable,
+  createTodosTable,
+} from '../queries/todos.queries';
 
 export const executeQueryArray = async (arr: any) => new Promise<void>(resolve => {
   const stop = arr.length;
@@ -13,6 +18,6 @@ export const executeQueryArray = async (arr: any) => new Promise<void>(resolve =
   });
 });
 
-export const dropTables = () => executeQueryArray([dropPlaylistsTable]);
-export const createTables = () => executeQueryArray([createPlaylistsTable]);
-export const insertIntoTables = () => executeQueryArray([insertPlaylists]);
+export const dropTables = () => executeQueryArray([dropPlaylistsTable, dropTodosTable]);
+export const createTables = () => executeQueryArray([createPlaylistsTable, createTodosTable]);
+export const insertIntoTables = () => executeQueryArray([insertPlaylists, insertTodos]);

@@ -3,6 +3,7 @@ import express, { Application } from 'express';
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const PlaylistsRouter = require("./routes/playlists.route");
+const TodosRouter = require("./routes/todos.route");
 
 const PORT = 3002;
 const corsOptions = {
@@ -24,6 +25,7 @@ app.get('/', (req, resp) => {
 })
 
 app.use("/playlists", PlaylistsRouter)
+app.use("/todos", TodosRouter)
 
 app.listen(PORT, () => {
   console.log(`API is listening on port ${PORT}`);
