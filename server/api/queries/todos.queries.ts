@@ -1,21 +1,21 @@
 export const createTodosTable = `
   DROP TABLE IF EXISTS todos;
-  CREATE TABLE IF NOT EXISTS todos {
+  CREATE TABLE IF NOT EXISTS todos (
     _id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description VARCHAR(1023),
-    date DATETIME NOT NULL,
-    isImportant BOOLEAN NOT NULL,
-    state VARCHAR(15) NOT NULL,
-    type VARCHAR(15) NOT NULL,
-    userpoints NUMBER
-  };
+    date TIMESTAMP,
+    isImportant BOOLEAN NOT NULL DEFAULT false,
+    state VARCHAR(15) NOT NULL DEFAULT 'to do',
+    type VARCHAR(15) NOT NULL DEFAULT 'ordinary',
+    userpoints SMALLINT
+  );
 `;
 
 export const insertTodos = `
   INSERT INTO todos (name, description, date, isImportant, state, type, userpoints)
   VALUES 
-         ('Example to do', 'Something about', ${new Date}, true, 'in progress', 'ordinary', 2),;
+         ('Example ToDo', 'Something about', TO_TIMESTAMP(${Date.now() / 1000}), true, 'in progress', 'ordinary', 2);
 `;
 
 export const getTodosQuery = `SELECT * FROM todos`;
