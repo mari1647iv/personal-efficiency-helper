@@ -7,17 +7,14 @@ function Todo() {
     <div className="App">
       <Header />
       <div className="content-box">
-        <aside>
-          <h1 className="todo-title">JUST DO IT.</h1>
-          <a
-            className="repo-link"
-            href="https://github.com/mari1647iv/personal-efficiency-helper"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub Repository
-          </a>
-        </aside>
+        <div className="heading-box">
+          <div className="heading-content">
+            <h1 className="todo-title">MY DAY</h1>
+          </div>
+          <h1 className="motivation">
+            GET<br /><span> THE<br />SH</span>IT<br />DONE.
+          </h1>
+        </div>
       </div>
     </div>
   );
