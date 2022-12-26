@@ -47,7 +47,7 @@ Current design mockups and UI palette is available in [Figma](https://www.figma.
 
 ## Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. <!--See [deployment](#deployment) for notes on how to deploy the project on a live system.-->
+These instructions will get you a copy of the project up and running on your local machine. <!--See [deployment](#deployment) for notes on how to deploy the project on a live system.-->
 
 ### Prerequisites <a name = "prerequisites"></a>
 
@@ -77,7 +77,7 @@ cd..
 
 ### Installation <a name = "installation"></a>
 
-Create user and database for the application
+If necessary, create user and database for the application
 
 ```bash
 sudo -iu posrgres
