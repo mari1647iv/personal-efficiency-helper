@@ -15,9 +15,9 @@ function Timer() {
   return (
     <div className="timer">
       <div className="timer-inner-box">
-        <div className={`timer-textbox ${isPlaying && (currentPhaseType === "phase") ? "" : "textbox-break-align"}`}>
+        <div className={`timer-textbox ${isPlaying && (currentPhaseType === "focus") ? "" : "textbox-break-align"}`}>
           <div className="motivation">
-            {isPlaying && (currentPhaseType === "phase") ?
+            {isPlaying && (currentPhaseType === "focus") ?
               <h1 id="focus">STAY<br />FOCUS.</h1> :
               <h1 id="break"><span>REST.</span><br />NOT QUIT.</h1>
             }
@@ -25,7 +25,7 @@ function Timer() {
           <hr />
           <h2>00 : {formatTime(Math.floor(currentTime / 60000))} : {formatTime(Math.floor((currentTime % 60000) / 1000))}</h2>
           <PomodoroScale />
-          <p>click to switch the phase</p>
+          <p className="instruction">click to switch the phase</p>
         </div>
       </div>
     </div>

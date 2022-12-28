@@ -62,7 +62,7 @@
   font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
-.timer-textbox p { 
+.instruction { 
   width: 100%; 
   padding-top: 15px;
   text-align: center;

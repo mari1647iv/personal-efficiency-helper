@@ -17,7 +17,7 @@ function ProductivityPlaylists() {
     <div className="playlists-box">
       <div className="playlists-header">
         <h2>PRODUCTIVITY PLAYLISTS</h2>
-        <Button variant="icon" onClick={() => togglePlaylistForm()}>
+        <Button variant="icon" onClick={togglePlaylistForm}>
           <Plus size={40} strokeWidth="1px" />
         </Button>
       </div>
